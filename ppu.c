@@ -1,5 +1,6 @@
 #include <stdbool.h>
 #include <stdint.h>
+#include <stddef.h>
 
 #include "include/ppu.h"
 
@@ -32,10 +33,14 @@ struct PPU {
     uint8_t open_bus;
 };
 
+PPU_t* new_ppu(bus_t* bus, WDC6502_t* cpu) {
+    return NULL;
+}
+
 uint8_t read_ppu(PPU_t* ppu, uint16_t address) {
     uint8_t result = ppu->open_bus;
 
-    switch (address) {
+    /*switch (address) {
         case 0x2002: 
             result = ppu->registers.PPUSTATUS; 
             break;
@@ -45,7 +50,7 @@ uint8_t read_ppu(PPU_t* ppu, uint16_t address) {
             break;
 
             
-    }
+    }*/
 
     ppu->open_bus = result;
     return result;

@@ -32,7 +32,6 @@ static inline void enter_interrupt(WDC6502_t* cpu, bool brk);
 
 static void set_flag(WDC6502_t* cpu, flag_t flag, bool value);
 static inline bool get_flag(WDC6502_t* cpu, flag_t flag);
-
 static inline void set_nz(WDC6502_t* cpu, uint8_t value);
 
 static uint8_t read_b(WDC6502_t* cpu, uint16_t address);

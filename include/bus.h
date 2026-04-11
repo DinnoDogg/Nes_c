@@ -5,10 +5,6 @@
 
 typedef struct bus bus_t;
 
-struct bus {
-    uint8_t test_memory[0x10000];
-};
-
 bus_t* new_bus();
 void free_bus(bus_t* bus);
 

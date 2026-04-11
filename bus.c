@@ -3,9 +3,10 @@
 
 #include "include/bus.h"
 
-/*struct bus {
+struct bus {
     uint8_t test_memory[0x10000];
-};*/
+    uint8_t open_bus;
+};
 
 bus_t* new_bus() {
     return (bus_t*) malloc(sizeof(bus_t));
